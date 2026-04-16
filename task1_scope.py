@@ -12,5 +12,12 @@ def change_name():
 # 2. Why does the print below still say "Global Alex"? 
 # 3. Try to make the function change the global name (Research the 'global' keyword).
 
+name = "Global Alex" # Global
+def change_name():
+    global name 
+    name = "Local Student" 
+    print("Inside function:", name)
+
+print("Before function:", name)
 change_name()
-print("Outside function:", name)
+print("After function:", name)
